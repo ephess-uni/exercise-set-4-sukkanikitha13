@@ -21,7 +21,7 @@ def time_between_shutdowns(logfile):
     """
     shutdown_entries = get_shutdown_events(logfile)
     first_sd = shutdown_entries[0]
-    last_sd = shutdown_entries[-1].split('')[1]
+    last_sd = shutdown_entries[-1]
 
     first_date = first_sd.split('')[1]
     last_date = last_sd.split('')[1]
