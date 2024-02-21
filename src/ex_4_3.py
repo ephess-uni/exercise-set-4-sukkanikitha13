@@ -23,9 +23,9 @@ def time_between_shutdowns(logfile):
     dt =list()
     for line in shutdown_entries:
         dt.append(line[1])
-    dt_only = logstamp_to_datetime(dt)
+    
 
-    return dt_only[-1] - dt_only[0]
+    return logstamp_to_datetime(dt[-1]) - logstamp_to_datetime(dt[0])
     
     
 
